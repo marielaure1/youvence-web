@@ -80,3 +80,9 @@
 .product.show{
     display: block;
 }
+
+section, nav, footer, header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
