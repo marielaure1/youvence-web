@@ -1,69 +1,69 @@
-/**
- * Changement de couleurs background
- */
+// /**
+//  * Changement de couleurs background
+//  */
 
-let bgColor = document.querySelectorAll(".background")
-let oldScrollY = 0
+// let bgColor = document.querySelectorAll(".background")
+// let oldScrollY = 0
 
-function background(){
+// function background(){
 
-    if(bgColor){
-        if(window.scrollY >= oldScrollY){
-            bgColor.forEach(element => {
-                if(window.scrollY > element.offsetTop - (window.innerHeight / 3 )){
-                    document.body.style.backgroundColor = element.getAttribute("data-color")
-                }
-            })
+//     if(bgColor){
+//         if(window.scrollY >= oldScrollY){
+//             bgColor.forEach(element => {
+//                 if(window.scrollY > element.offsetTop - (window.innerHeight / 3 )){
+//                     document.body.style.backgroundColor = element.getAttribute("data-color")
+//                 }
+//             })
     
-        } else{
-            bgColor.forEach(element => {
-                if(window.scrollY < element.offsetTop + (window.innerHeight / 3 )   ){
-                    document.body.style.backgroundColor = element.getAttribute("data-color")
-                }
-            })
+//         } else{
+//             bgColor.forEach(element => {
+//                 if(window.scrollY < element.offsetTop + (window.innerHeight / 3 )   ){
+//                     document.body.style.backgroundColor = element.getAttribute("data-color")
+//                 }
+//             })
     
-        }
+//         }
         
-        oldScrollY = window.scrollY
-    }
-}
+//         oldScrollY = window.scrollY
+//     }
+// }
 
-window.addEventListener("scroll", background)
+// window.addEventListener("scroll", background)
 
-/**
- * Apparitition texte
- */
+// /**
+//  * Apparitition texte
+//  */
 
-let fadeContent = document.querySelectorAll(".animation.animation-fade-content")
+// let fadeContent = document.querySelectorAll(".animation.animation-fade-content")
 
-function fade(){
+// function fade(){
 
-    if(fadeContent){
-        if(window.scrollY >= oldScrollY){
-            fadeContent.forEach(element => {
-                if(window.scrollY > element.offsetTop - ((window.innerHeight / 3) * 2)){
-                    element.classList.add("show")
-                }
-            })
+//     if(fadeContent){
+//         if(window.scrollY >= oldScrollY){
+//             fadeContent.forEach(element => {
+//                 if(window.scrollY > element.offsetTop - ((window.innerHeight / 3) * 2)){
+//                     element.classList.add("show")
+//                 }
+//             })
     
-        } 
+//         } 
 
-        else{
-            fadeContent.forEach(element => {
-                if(window.scrollY > element.offsetTop - 400){
-                    element.classList.add("show")
-                }
-            })
+//         else{
+//             fadeContent.forEach(element => {
+//                 if(window.scrollY > element.offsetTop - 400){
+//                     element.classList.add("show")
+//                 }
+//             })
     
-        }
+//         }
         
-        oldScrollY = window.scrollY
-    }
-}
+//         oldScrollY = window.scrollY
+//     }
+// }
 
-window.addEventListener("scroll", () => {
-    background()
-    fade()
-})
+// window.addEventListener("scroll", () => {
+//     background()
+//     fade()
+// })
 
-background()
+// background()
